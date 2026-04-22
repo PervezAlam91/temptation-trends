@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Slider with Header</title>
+    <title>Contact Us - Temptation Trends</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        /* Header Menu */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
             width: 100%;
             height: 60px;
-            background: #333;
+            background: #111;
             color: white;
             display: flex;
             align-items: center;
-            padding-left: 20px;
+            justify-content: space-between;
+            padding: 0 20px;
             z-index: 1000;
         }
 
         .header a {
             color: white;
-            margin-right: 20px;
             text-decoration: none;
+            margin-left: 20px;
         }
 
-        /* Slider below header */
+        /* Slider */
         .slider {
-            margin-top: 60px; /* push below header */
+            margin-top: 60px;
             width: 100%;
-            height: calc(100vh - 60px); /* full screen minus header */
+            height: 60vh;
             position: relative;
         }
 
@@ -47,16 +48,8 @@
         .slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* IMPORTANT: shows full image */
-            background: black;   /* optional: fills empty space */
+            object-fit: cover;
         }
-
-        .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center; /* keeps center visible */
-}
 
         /* Animation delays */
         .slide:nth-child(1) { animation-delay: 0s; }
@@ -77,6 +70,44 @@
             15%  { opacity: 0; }
             100% { opacity: 0; }
         }
+
+        /* Contact Section */
+        .contact {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contacts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #000;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        .card a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+            margin-top: 40px;
+        }
     </style>
 </head>
 
@@ -92,11 +123,6 @@
     </div>
 </div>
 
-<!-- Footer -->
-<div class="footer">
-    © 2026 Temptation Trends | All Rights Reserved
-</div>
-
 <!-- Slider -->
 <div class="slider">
     <div class="slide"><img src="img1.jpg"></div>
@@ -109,6 +135,31 @@
     <div class="slide"><img src="img8.jpg"></div>
     <div class="slide"><img src="img9.jpg"></div>
     <div class="slide"><img src="img10.jpg"></div>
+</div>
+
+<!-- Contact Section -->
+<div class="contact">
+    <h1>Contact Us</h1>
+    <p>Reach out to us anytime</p>
+
+    <div class="contacts">
+        <div class="card">
+            <h2>Sharukh</h2>
+            <p>Call / WhatsApp</p>
+            <a href="tel:9058181206">9058181206</a>
+        </div>
+
+        <div class="card">
+            <h2>Saurabh</h2>
+            <p>Call / WhatsApp</p>
+            <a href="tel:8532980026">8532980026</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 Temptation Trends
 </div>
 
 </body>
